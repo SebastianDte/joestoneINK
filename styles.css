@@ -1,0 +1,377 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, #000, #1a1a1a);
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #C57C3D; /* Naranja */
+}
+
+a {
+    color: #C57C3D;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color:rgba(0, 0, 0, 0.6);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Clase para cuando se hace scroll */
+header.scrolled {
+    background-color: rgba(26, 26, 26, 0.7); /* Fondo más transparente */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logotipo */
+header .logo img {
+    height: 60px; /* Ajusta el tamaño según tu logotipo */
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+/* Menú de Navegación */
+header nav .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav .nav-links li a {
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+header nav .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #C57C3D;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+header nav .nav-links li a:hover {
+    color: #C57C3D;
+}
+
+header nav .nav-links li a:hover::after {
+    width: 100%; /* Subrayado animado */
+}
+
+/* Menú Hamburguesa (Oculto por defecto) */
+header nav .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px; /* Espaciado para mejor tacto en móviles */
+}
+
+header nav .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #C57C3D;
+    transition: all 0.3s ease;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    /* Ocultar los enlaces y mostrar el menú hamburguesa */
+    header nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border: 1px solid #C57C3D;
+        border-radius: 10px;
+    }
+
+    header nav .nav-links.active {
+        display: flex;
+    }
+
+    /* Mostrar el menú hamburguesa */
+    header nav .hamburger {
+        display: flex;
+    }
+
+    /* Animación del menú hamburguesa */
+    header nav .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    header nav .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    header nav .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+/* Home Section */
+.home {
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido en la parte superior */
+    justify-content: center;
+    background-image: url('./assets/fondo\ home.jpg');
+    background-size: cover; /* Cubre todo el espacio sin desbordar */
+    background-position: center; /* Centra la imagen */
+    position: relative;
+    text-align: center;
+    height: 70vh; /* Ocupa el 100% del alto de la pantalla */
+    margin: 0; /* Elimina el margen predeterminado */
+    overflow: hidden; /* Evita el scroll */
+    padding-top: 20vh; /* Espacio desde la parte superior */
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Capa oscura más clara */
+}
+
+.home .container {
+    position: relative; /* Asegura que el texto esté sobre la capa oscura */
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px; /* Padding lateral para móviles */
+}
+
+.home-text h2 {
+    font-size: 3rem; /* Tamaño más grande para el título */
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.home-text h2 .logo-text {
+    font-weight: bold;
+}
+
+.home-text h2 .orange-text {
+    color: #C57C3D;
+}
+
+.home-text p {
+    font-size: 1.5rem; /* Tamaño más grande para el texto */
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.home-text .btn {
+    background-color: #C57C3D;
+    color: #000;
+    padding: 15px 30px; /* Botón más grande */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-text .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(197, 124, 61, 0.3);
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    .home {
+        padding-top: 15vh; /* Menor espacio en móviles */
+    }
+
+    .home-text h2 {
+        font-size: 2rem; /* Tamaño más pequeño en móviles */
+    }
+
+    .home-text p {
+        font-size: 1.2rem; /* Tamaño más pequeño en móviles */
+    }
+
+    .home-text .btn {
+        padding: 10px 20px; /* Botón más pequeño en móviles */
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------/*
+**************************************** /*GALERIA/*******************************
+/* ---------------------------------------------------------------------------------/*
+
+/* Gallery Section */
+/* Gallery Section */
+#gallery {
+    padding: 50px 0;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.container-carousel {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;  /* Relación de aspecto profesional (ajustar si es necesario) */
+    overflow: hidden;
+}
+
+.carruseles {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider-section {
+    min-width: 100%;  /* Cada slide ocupa el 100% del contenedor */
+    height: 100%;
+    flex-shrink: 0;  /* Evita que las imágenes se encojan */
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    border-radius: 15px;
+}
+
+/* Botones */
+.btn-left, .btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.btn-left { left: 20px; }
+.btn-right { right: 20px; }
+
+
+
+
+
+/* ---------------------------------------------------------------------------------/*
+**************************************** /*Diseños/*******************************
+/* ---------------------------------------------------------------------------------/*
+
+/* Designs Section */
+.designs {
+    padding: 100px 0;
+}
+
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background-color: #111;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact button {
+    background-color: #C57C3D;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #000;
+    text-align: center;
+    border-top: 2px solid #C57C3D;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    margin: 0 10px;
+}
+

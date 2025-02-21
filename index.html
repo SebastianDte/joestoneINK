@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOESTONEINK - Tatuajes Modernos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <!-- Logotipo -->
+            <div class="logo">
+                <img src="./assets/Logo.png" alt="JOESTONEINK Logo">
+            </div>
+    
+            <!-- Menú de Navegación -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#designs">Diseños</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <!-- Ícono del Menú Hamburguesa -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!-- Home Section -->
+<section id="home" class="home">
+    <div class="container">
+        <div class="home-text">
+            <h2>Bienvenido a <span class="logo-text">JOESTONE<span class="orange-text">INK</span></span></h2>
+            <p>Estudio de Tatuaje</p>
+            <a href="#contact" class="btn">Reserva tu turno</a>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2>Galería</h2>
+        <div class="container-carousel">
+            <div class="carruseles" id="slider">
+                <section class="slider-section">
+                    <img src="https://i.pinimg.com/736x/26/f5/aa/26f5aae4b507e5d3ae0a8003a7eb7886.jpg" alt="Tatuaje 1">
+                </section>
+                <section class="slider-section">
+                    <img src="https://i.pinimg.com/736x/59/ee/17/59ee17e222b719765608366a1efdf1c0.jpg" alt="Tatuaje 2">
+                </section>
+                <section class="slider-section">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK7z-DDux23rutp0hamhlcHZYEOHF_z6lxFw&s" alt="Tatuaje 3">
+                </section>
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+            <div class="btn-left"><i class='bx bx-chevron-left'></i></div>
+            <div class="btn-right"><i class='bx bx-chevron-right'></i></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Designs Section -->
+    <section id="designs" class="designs">
+        <div class="container">
+            <h2>Diseños</h2>
+            <div class="designs-grid">
+                <div class="card">
+                    <img src="design1.jpg" alt="Diseño 1">
+                    <h3>Diseño 1</h3>
+                </div>
+                <div class="card">
+                    <img src="design2.jpg" alt="Diseño 2">
+                    <h3>Diseño 2</h3>
+                </div>
+                <div class="card">
+                    <img src="design3.jpg" alt="Diseño 3">
+                    <h3>Diseño 3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Asunto" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+            <div class="social-links">
+                <a href="https://instagram.com/joestoneink" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/123456789" target="_blank">
+                    <img src="whatsapp-icon.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
