@@ -278,7 +278,7 @@ header nav .hamburger span {
 /* Estilos para Móviles (hasta 480px) */
 @media (max-width: 480px) {
     .home {
-        height: 600px; /* Altura fija en píxeles (ajusta este valor según tus necesidades) */
+        height: 700px; /* Altura fija en píxeles (ajusta este valor según tus necesidades) */
         padding: 10px; /* Padding reducido */
         background-image: url('./assets/fondo\ home.jpg');
         background-size: cover; /* Recorta la imagen para que cubra el contenedor */
