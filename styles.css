@@ -147,6 +147,31 @@ header nav .hamburger span {
     header nav .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+    header .logo img {
+        display: none;
+    }
+
+    /* Mostrar el texto "JOESTONEINK" en dispositivos móviles y tablets */
+    header .logo .logo-text {
+        display: block; /* Mostrar el texto */
+        font-size: 15px; /* Tamaño más pequeño */
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;/* Fuente moderna */
+        text-transform: uppercase; /* Convertir texto a mayúsculas */
+        color: white; /* Color blanco para "JOESTONE" */
+    }
+
+    /* Cambiar el color de "INK" a naranja */
+    header .logo .orange-text {
+        color: #C57C3D; /* Color naranja para "INK" */
+    } 
+    
+}
+/* Ocultar el texto en pantallas más grandes */
+@media (min-width: 769px) {
+    header .logo .logo-text {
+        display: none; /* Ocultar el texto en desktop */
+    }
 }
 /* Home Section */
 .home {
@@ -158,7 +183,7 @@ header nav .hamburger span {
     background-position: center; /* Centra la imagen */
     position: relative;
     text-align: center;
-    height: 70vh; /* Ocupa el 100% del alto de la pantalla */
+    height: 100vh; /* Ocupa el 100% del alto de la pantalla */
     margin: 0; /* Elimina el margen predeterminado */
     overflow: hidden; /* Evita el scroll */
     padding-top: 20vh; /* Espacio desde la parte superior */
@@ -218,22 +243,66 @@ header nav .hamburger span {
     box-shadow: 0 5px 15px rgba(197, 124, 61, 0.3);
 }
 
-/* Estilos Responsive */
-@media (max-width: 768px) {
+/* Estilos para Tablets (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
     .home {
-        padding-top: 15vh; /* Menor espacio en móviles */
+        height: 900px; /* Altura fija en píxeles (ajusta este valor según tus necesidades) */
+        padding: 10px; /* Padding reducido */
+        background-image: url('./assets/fondo\ home.jpg');
+        background-size: cover; /* Recorta la imagen para que cubra el contenedor */
+        background-position: center; /* Centra la imagen */
+        display: flex;
+        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center;
+        text-align: center;
     }
 
     .home-text h2 {
-        font-size: 2rem; /* Tamaño más pequeño en móviles */
+        font-size: 3rem; /* Tamaño más pequeño en móviles */
+        margin-bottom: 10px; /* Menor margen inferior */
+        margin-top: -200px;
     }
 
     .home-text p {
-        font-size: 1.2rem; /* Tamaño más pequeño en móviles */
+        font-size: 2rem; /* Tamaño más pequeño en móviles */
+        margin-bottom: 10px; /* Menor margen inferior */
     }
 
     .home-text .btn {
-        padding: 10px 20px; /* Botón más pequeño en móviles */
+        padding: 30px 40px; /* Botón más pequeño en móviles */
+        font-size: 2rem; /* Tamaño de fuente más pequeño */
+    }
+}
+
+/* Estilos para Móviles (hasta 480px) */
+/* Estilos para Móviles (hasta 480px) */
+@media (max-width: 480px) {
+    .home {
+        height: 580px; /* Altura fija en píxeles (ajusta este valor según tus necesidades) */
+        padding: 10px; /* Padding reducido */
+        background-image: url('./assets/fondo\ home.jpg');
+        background-size: cover; /* Recorta la imagen para que cubra el contenedor */
+        background-position: center; /* Centra la imagen */
+        display: flex;
+        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home-text h2 {
+        font-size: 2.5rem; /* Tamaño más pequeño en móviles */
+        margin-bottom: 10px; /* Menor margen inferior */
+        margin-top: -30px;
+    }
+
+    .home-text p {
+        font-size: 1.5rem; /* Tamaño más pequeño en móviles */
+        margin-bottom: 20px; /* Menor margen inferior */
+    }
+
+    .home-text .btn {
+        padding: 20px 30px; /* Botón más pequeño en móviles */
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
     }
 }
 
@@ -244,62 +313,166 @@ header nav .hamburger span {
 /* ---------------------------------------------------------------------------------/*
 
 /* Gallery Section */
-/* Gallery Section */
 #gallery {
     padding: 50px 0;
     background-color: #1a1a1a;
     text-align: center;
 }
 
+
+/* Título "Galería" */
+#gallery h2 {
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #C57C3D; /* Color del texto */
+    margin-bottom: 30px; /* Espacio inferior reducido */
+    padding-top: 5px; /* Más espacio arriba */
+    padding-bottom: 0px; /* Menos espacio abajo */
+    position: relative; /* Para el subrayado */
+    display: inline-block; /* Para que el subrayado no ocupe todo el ancho */
+}
+
+/* Subrayado discreto */
+#gallery h2::after {
+    
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 50%; /* Ancho del subrayado */
+    height: 2px; /* Grosor del subrayado */
+    background-color: #C57C3D; /* Color naranja */
+    transform: translateX(-50%); /* Centrar el subrayado */
+}
 .container-carousel {
     position: relative;
-    width: 90%;
-    max-width: 800px;
+    width: 95%; /* Aumentamos el ancho del contenedor */
+    max-width: 1200px; /* Aumentamos el ancho máximo */
     margin: 0 auto;
-    aspect-ratio: 16/9;  /* Relación de aspecto profesional (ajustar si es necesario) */
     overflow: hidden;
 }
 
 .carruseles {
-    width: 100%;
-    height: 100%;
     display: flex;
-    transition: transform 0.6s ease;
+    align-items: center;
+    justify-content: center;
+    height: 350px; /* Mantenemos la altura */
+    position: relative;
 }
 
 .slider-section {
-    min-width: 100%;  /* Cada slide ocupa el 100% del contenedor */
-    height: 100%;
-    flex-shrink: 0;  /* Evita que las imágenes se encojan */
+    position: absolute;
+    width: 100%; /* Ancho de las imágenes laterales */
+    height: 80%; /* Altura de las imágenes laterales */
+    transition: all 0.6s ease;
+    opacity: 0.2; /* Opacidad para las imágenes laterales */
+    z-index: 1;
+    border-radius: 25px; /* Más redondeado */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    border: 2px solid rgba(197, 124, 61, 0.3); /* Contorno naranja sutil */
 }
 
 .slider-section img {
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-    border-radius: 15px;
+    width: 90%;
+    height: 90%;
+    object-fit: contain; /* Ajusta la imagen sin recortar */
+    border-radius: 25px; /* Más redondeado */
 }
 
-/* Botones */
+/* Imagen central */
+.slider-section.active {
+    width: 70%; /* Ancho de la imagen central */
+    height: 90%; /* Altura de la imagen central */
+    opacity: 1; /* Sin opacidad */
+    z-index: 2; /* La imagen central está por encima */
+    transform: scale(1.1); /* Efecto de escala para resaltar */
+    border: 2px solid rgba(197, 124, 61, 0.7); /* Contorno naranja más visible */
+}
+
+/* Posicionamiento de las imágenes laterales */
+.slider-section.prev {
+    left: 35%; /* Mantenemos la superposición */
+    transform: translateX(-50%) scale(1.1); /* Escala y posición */
+
+   
+}
+
+.slider-section.next {
+    right: 35%; /* Mantenemos la superposición */
+    transform: translateX(50%) scale(1.1); /* Escala y posición */
+}
+
+/* Botones del carrusel */
 .btn-left, .btn-right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
     color: #fff;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: none;
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
     z-index: 10;
+    transition: background 0.3s ease; /* Transición suave */
 }
 
-.btn-left { left: 20px; }
-.btn-right { right: 20px; }
+.btn-left {
+    left: 15%; /* Acercamos el botón izquierdo */
+}
+
+.btn-right {
+    right: 15%; /* Acercamos el botón derecho */
+}
+
+.btn-left:hover, .btn-right:hover {
+    background: rgba(197, 124, 61, 0.7); /* Efecto hover naranja */
+}
 
 
+/* Estilos para móviles (hasta 768px) */
+@media (max-width: 768px) {
+    .container-carousel {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        max-width: 100%; /* Sin límite de ancho */
+    }
 
+    .carruseles {
+        height: 300px; /* Altura reducida para móviles */
+    }
+
+    .slider-section {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 100%; /* Ocupa toda la altura */
+        opacity: 0; /* Oculta todas las imágenes por defecto */
+        transform: scale(1); /* Sin escala */
+        border: none; /* Sin borde */
+    }
+
+    .slider-section.active {
+        opacity: 1; /* Muestra solo la imagen activa */
+        transform: scale(1); /* Sin escala */
+        border: 2px solid rgba(197, 124, 61, 0.7); /* Borde naranja */
+    }
+
+    .slider-section.prev, .slider-section.next {
+        display: none; /* Oculta las imágenes laterales */
+    }
+
+    .btn-left, .btn-right {
+        font-size: 1.5rem; /* Tamaño más pequeño para móviles */
+        padding: 8px; /* Padding reducido */
+    }
+
+    .btn-left {
+        left: 10px; /* Posición del botón izquierdo */
+    }
+
+    .btn-right {
+        right: 10px; /* Posición del botón derecho */
+    }
+}
 
 
 /* ---------------------------------------------------------------------------------/*
