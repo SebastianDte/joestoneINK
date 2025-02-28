@@ -317,6 +317,7 @@ header nav .hamburger span {
     padding: 50px 0;
     background-color: #1a1a1a;
     text-align: center;
+    
 }
 
 
@@ -344,39 +345,48 @@ header nav .hamburger span {
     transform: translateX(-50%); /* Centrar el subrayado */
 }
 .container-carousel {
+    background-color: rgba(0, 0, 0, 0.3); ;
     position: relative;
     width: 95%; /* Aumentamos el ancho del contenedor */
     max-width: 1200px; /* Aumentamos el ancho máximo */
     margin: 0 auto;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    border: 2px solid rgba(197, 124, 61, 0.3); /* Contorno naranja sutil */
+    border-radius: 25px;
 }
 
 .carruseles {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 350px; /* Mantenemos la altura */
+    height: 70vh; /* Mantenemos la altura */
     position: relative;
+    
+    
 }
 
 .slider-section {
     position: absolute;
-    width: 100%; /* Ancho de las imágenes laterales */
-    height: 80%; /* Altura de las imágenes laterales */
+    width: 50%; /* Ancho de las imágenes laterales */
+    height: 70%; /* Altura de las imágenes laterales */
     transition: all 0.6s ease;
-    opacity: 0.2; /* Opacidad para las imágenes laterales */
+    opacity: 0.3; /* Opacidad para las imágenes laterales */
     z-index: 1;
     border-radius: 25px; /* Más redondeado */
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
-    border: 2px solid rgba(197, 124, 61, 0.3); /* Contorno naranja sutil */
+    
+    
 }
 
 .slider-section img {
-    width: 90%;
-    height: 90%;
+    padding-top: 0px;
+    width: 100%;
+    height: 100%;
     object-fit: contain; /* Ajusta la imagen sin recortar */
     border-radius: 25px; /* Más redondeado */
+    
+    
 }
 
 /* Imagen central */
@@ -386,14 +396,16 @@ header nav .hamburger span {
     opacity: 1; /* Sin opacidad */
     z-index: 2; /* La imagen central está por encima */
     transform: scale(1.1); /* Efecto de escala para resaltar */
-    border: 2px solid rgba(197, 124, 61, 0.7); /* Contorno naranja más visible */
+    
+    
+   
 }
 
 /* Posicionamiento de las imágenes laterales */
 .slider-section.prev {
     left: 35%; /* Mantenemos la superposición */
     transform: translateX(-50%) scale(1.1); /* Escala y posición */
-
+    
    
 }
 
@@ -419,11 +431,11 @@ header nav .hamburger span {
 }
 
 .btn-left {
-    left: 15%; /* Acercamos el botón izquierdo */
+    left: 5%; /* Acercamos el botón izquierdo */
 }
 
 .btn-right {
-    right: 15%; /* Acercamos el botón derecho */
+    right: 5%; /* Acercamos el botón derecho */
 }
 
 .btn-left:hover, .btn-right:hover {
@@ -436,10 +448,12 @@ header nav .hamburger span {
     .container-carousel {
         width: 100%; /* Ocupa todo el ancho en móviles */
         max-width: 100%; /* Sin límite de ancho */
+       
     }
 
     .carruseles {
-        height: 300px; /* Altura reducida para móviles */
+        height: 70vh; /* Mantenemos la altura */
+  
     }
 
     .slider-section {
@@ -448,12 +462,17 @@ header nav .hamburger span {
         opacity: 0; /* Oculta todas las imágenes por defecto */
         transform: scale(1); /* Sin escala */
         border: none; /* Sin borde */
+        
     }
 
+   
     .slider-section.active {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 100%; /* Ocupa toda la altura */
         opacity: 1; /* Muestra solo la imagen activa */
         transform: scale(1); /* Sin escala */
-        border: 2px solid rgba(197, 124, 61, 0.7); /* Borde naranja */
+        
+        
     }
 
     .slider-section.prev, .slider-section.next {
@@ -475,32 +494,138 @@ header nav .hamburger span {
 }
 
 
-/* ---------------------------------------------------------------------------------/*
-**************************************** /*Diseños/*******************************
-/* ---------------------------------------------------------------------------------/*
+/* **************************************** */
+/* Diseños */
+/* **************************************** */
 
-/* Designs Section */
-.designs {
-    padding: 100px 0;
-}
-
-.designs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background-color: #111;
-    padding: 20px;
-    border-radius: 10px;
+#designs {
+    padding: 50px 0;
+    background-color: #1a1a1a;
     text-align: center;
 }
 
+/* Título "Diseño" */
+#designs h2 {
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #fff; /* Color del texto */
+    margin-bottom: 30px; /* Espacio inferior reducido */
+    padding-top: 5px; /* Más espacio arriba */
+    padding-bottom: 0px; /* Menos espacio abajo */
+    position: relative; /* Para el subrayado */
+    display: inline-block; /* Para que el subrayado no ocupe todo el ancho */
+}
+
+/* Subrayado discreto */
+#designs h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 50%; /* Ancho del subrayado */
+    height: 2px; /* Grosor del subrayado */
+    background-color: #C57C3D; /* Color naranja */
+    transform: translateX(-50%); /* Centrar el subrayado */
+}
+
+/* Designs Section */
+.designs {
+    padding: 50px 0; /* Reducir el padding para que las tarjetas estén más cerca */
+}
+
+/* Diseño de la cuadrícula ajustada */
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    gap: 10px; /* Espacio entre las tarjetas */
+    padding: 0 20px; /* Padding a los lados */
+}
+
+/* Tarjetas */
+.card {
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    border-radius: 0; /* Esquinas rectas */
+    text-align: center;
+    overflow: hidden; /* Para que nada sobresalga */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Imágenes dentro de las tarjetas */
 .card img {
-    max-width: 100%;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 150px; /* Altura fija más pequeña */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
     border-radius: 10px;
 }
+
+/* Efecto de lupa en hover */
+.card:hover img {
+    transform: scale(1.05); /* Aumenta ligeramente al pasar el mouse */
+}
+
+/* Estilos para la imagen a pantalla completa */
+#fullscreen-modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ancho completo */
+    height: 100vh; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Imagen en pantalla completa */
+#fullscreen-modal img {
+    max-width: 90%; /* Se ajusta al 90% del ancho */
+    max-height: 90%; /* Se ajusta al 90% de la altura */
+    object-fit: contain; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Mantiene las esquinas redondeadas */
+}
+
+/* Botón de cerrar */
+#fullscreen-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .designs-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+        gap: 5px; /* Menor espacio entre tarjetas */
+    }
+
+    .card img {
+        height: 120px; /* Altura más pequeña en móviles */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (ej: móviles pequeños) */
+@media (max-width: 480px) {
+    .designs-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+        gap: 5px; /* Menor espacio entre tarjetas */
+    }
+
+    .card img {
+        height: 100px; /* Altura aún más pequeña para móviles pequeños */
+    }
+}
+
 
 /* Contact Section */
 .contact {

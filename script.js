@@ -105,3 +105,20 @@ let currentIndex = 0;
     // Inicializar el carrusel
     updateSlider();
 })();
+
+
+
+//modal diseños:
+// Función para abrir el modal con la imagen
+function openModal(imageSrc) {
+    const modal = document.getElementById('fullscreen-modal');
+    const fullImage = document.getElementById('fullscreen-image');
+    fullImage.src = imageSrc; // Establecemos la imagen
+    modal.style.display = 'flex'; // Mostramos el modal
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    const modal = document.getElementById('fullscreen-modal');
+    modal.style.display = 'none'; // Ocultamos el modal
+}

@@ -53,13 +53,22 @@
         <div class="container-carousel">
             <div class="carruseles" id="slider">
                 <section class="slider-section">
-                    <img src="https://i.pinimg.com/736x/26/f5/aa/26f5aae4b507e5d3ae0a8003a7eb7886.jpg" alt="Tatuaje 1">
+                    <img src="./assets/Galeria-img/0169E207-B929-46BC-AE7B-46593A2E71EE.JPG" alt="Tatuaje 1">
                 </section>
                 <section class="slider-section">
-                    <img src="https://i.pinimg.com/736x/59/ee/17/59ee17e222b719765608366a1efdf1c0.jpg" alt="Tatuaje 2">
+                    <img src="./assets/Galeria-img/1B0E3EB0-1AAC-436D-B2F4-BF64F6FB3498.JPG" alt="Tatuaje 2">
                 </section>
                 <section class="slider-section">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK7z-DDux23rutp0hamhlcHZYEOHF_z6lxFw&s" alt="Tatuaje 3">
+                    <img src="./assets/Galeria-img/CEB3BD71-1933-43E6-908B-DE5016F1F42C.JPG" alt="Tatuaje 3">
+                </section>
+                <section class="slider-section">
+                    <img src="./assets/Galeria-img/FCF55C8D-189A-488B-9F6C-61745660E3A6.JPG" alt="Tatuaje 3">
+                </section>
+                <section class="slider-section">
+                    <img src="./assets/Galeria-img/IMG_2430.JPG" alt="Tatuaje 3">
+                </section>
+                <section class="slider-section">
+                    <img src="./assets/Galeria-img/Tatuaje.png" alt="Tatuaje 3">
                 </section>
                 <!-- Agrega más imágenes según sea necesario -->
             </div>
@@ -69,26 +78,47 @@
     </div>
 </section>
 
-    <!-- Designs Section -->
-    <section id="designs" class="designs">
-        <div class="container">
-            <h2>Diseños</h2>
-            <div class="designs-grid">
-                <div class="card">
-                    <img src="design1.jpg" alt="Diseño 1">
-                    <h3>Diseño 1</h3>
-                </div>
-                <div class="card">
-                    <img src="design2.jpg" alt="Diseño 2">
-                    <h3>Diseño 2</h3>
-                </div>
-                <div class="card">
-                    <img src="design3.jpg" alt="Diseño 3">
-                    <h3>Diseño 3</h3>
-                </div>
+  <!-- Designs Section -->
+<section id="designs" class="designs">
+    <div class="container">
+        <h2>Diseños</h2>
+        <div class="designs-grid">
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/ef/ec/82/efec82e0d24c2b41d5fd3103ff83dd7e.jpg')">
+                <img src="https://i.pinimg.com/736x/ef/ec/82/efec82e0d24c2b41d5fd3103ff83dd7e.jpg" alt="Diseño 1">
+            </div>
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/86/30/6e/86306e92911c701247a33829bb19a4e4.jpg')">
+                <img src="https://i.pinimg.com/736x/86/30/6e/86306e92911c701247a33829bb19a4e4.jpg" alt="Diseño 2">
+            </div>
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+            </div>
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+            </div>
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+            </div>
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+            </div>
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+            </div>
+            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
             </div>
         </div>
-    </section>
+        
+        
+    </div>
+</section>
+
+
+<!-- Modal para la imagen en pantalla completa -->
+<div id="fullscreen-modal">
+    <button class="close" onclick="closeModal()">×</button>
+    <img id="fullscreen-image" src="" alt="Diseño completo">
+</div>
 
 <!-- Contact Section -->
 <section id="contact" class="contact">
