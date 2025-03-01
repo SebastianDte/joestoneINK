@@ -464,6 +464,15 @@ header nav .hamburger span {
         border: none; /* Sin borde */
         
     }
+    .slider-section img {
+        padding-top: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit:fill; /* Ajusta la imagen sin recortar */
+        border-radius: 25px; /* Más redondeado */
+        
+        
+    }
 
    
     .slider-section.active {
