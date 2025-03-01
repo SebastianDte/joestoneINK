@@ -457,13 +457,12 @@ header nav .hamburger span {
 @media (max-width: 768px) {
     .container-carousel {
         width: 100%; /* Ocupa todo el ancho en móviles */
-        max-width: 100%; /* Sin límite de ancho */
+        max-width: 95%; /* Sin límite de ancho */
        
     }
 
     .carruseles {
-        height: 70vh; /* Mantenemos la altura */
-  
+        height: 55vh; /* Mantenemos la altura */
     }
 
     .slider-section {
@@ -554,8 +553,8 @@ header nav .hamburger span {
 /* Diseño de la cuadrícula ajustada */
 .designs-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
-    gap: 10px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(3, 1fr); /* 4 columnas por fila */
+    gap: 5px; /* Espacio entre las tarjetas */
     padding: 0 20px; /* Padding a los lados */
 }
 
@@ -573,8 +572,8 @@ header nav .hamburger span {
 /* Imágenes dentro de las tarjetas */
 .card img {
     width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 150px; /* Altura fija más pequeña */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    height: 80%; /* Altura fija más pequeña */
+    object-fit: contain; /* Ajusta la imagen sin deformarla */
     transition: transform 0.3s ease; /* Transición suave para el zoom */
     border-radius: 10px;
 }
@@ -629,7 +628,7 @@ header nav .hamburger span {
     }
 
     .card img {
-        height: 120px; /* Altura más pequeña en móviles */
+        height: 80%; /* Altura más pequeña en móviles */
     }
 }
 
@@ -641,7 +640,7 @@ header nav .hamburger span {
     }
 
     .card img {
-        height: 100px; /* Altura aún más pequeña para móviles pequeños */
+        height: 90%; /* Altura aún más pequeña para móviles pequeños */
     }
 }
 
