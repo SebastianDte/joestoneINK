@@ -197,7 +197,7 @@ header nav .hamburger span {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Capa oscura más clara */
+    background-color: rgba(0, 0, 0, 0.8); /* Capa oscura más clara */
 }
 
 .home .container {
@@ -284,7 +284,7 @@ header nav .hamburger span {
     }
 }
 
-/* Estilos para Móviles (hasta 480px) */
+
 /* Estilos para Móviles (hasta 480px) */
 @media (max-width: 480px) {
     .home {
@@ -314,6 +314,7 @@ header nav .hamburger span {
         padding: 20px 30px; /* Botón más pequeño en móviles */
         font-size: 1rem; /* Tamaño de fuente más pequeño */
     }
+  
 }
 
 
@@ -413,14 +414,14 @@ header nav .hamburger span {
 
 /* Posicionamiento de las imágenes laterales */
 .slider-section.prev {
-    left: 35%; /* Mantenemos la superposición */
+    left:28%; /* Mantenemos la superposición */
     transform: translateX(-50%) scale(1.1); /* Escala y posición */
     
    
 }
 
 .slider-section.next {
-    right: 35%; /* Mantenemos la superposición */
+    right: 28%; /* Mantenemos la superposición */
     transform: translateX(50%) scale(1.1); /* Escala y posición */
 }
 
@@ -499,11 +500,15 @@ header nav .hamburger span {
 
     .btn-left, .btn-right {
         font-size: 1.5rem; /* Tamaño más pequeño para móviles */
-        padding: 8px; /* Padding reducido */
+        padding: 8px; 
+          
+        width: 12px; /* Aumenta el ancho */
+        height: 12px; /* Aumenta el alto *//
     }
 
     .btn-left {
         left: 10px; /* Posición del botón izquierdo */
+   
     }
 
     .btn-right {
