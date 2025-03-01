@@ -117,22 +117,23 @@
         <img id="fullscreen-image" src="" alt="Diseño completo">
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="contact-title">Contacto</h2>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <input type="text" name="apellido" placeholder="Apellido" required>
-                </div>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="asunto" placeholder="Asunto" required>
-                <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="contact-title">Contacto</h2>
+        <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="text" name="apellido" placeholder="Apellido">
+            </div>
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="asunto" placeholder="Asunto">
+            <textarea name="mensaje" placeholder="Mensaje" rows="4"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
@@ -156,8 +157,9 @@
     <div id="success-modal" class="modal">
         <div class="modal-content">
             <img src="./assets/Logo.svg" alt="Logo JOESTONEINK" class="modal-logo">
-            <h2>¡Correo enviado correctamente!</h2>
-            <p>Nos pondremos en contacto contigo pronto.</p>
+            <h2>¡Mensaje enviado! 📩</h2>
+            <p>Te vamos a contactar pronto.¡Gracias por escribirnos!</p>
+            
             <button onclick="closeSuccessModal()">OK</button>
         </div>
     </div>

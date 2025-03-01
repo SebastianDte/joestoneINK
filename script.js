@@ -148,27 +148,27 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     const mensaje = this.mensaje.value.trim();
 
     if (!/^[A-Za-z\s]{3,50}$/.test(nombre)) {
-        showMessage('El nombre debe tener entre 3 y 50 caracteres y solo puede contener letras y espacios.', 'error');
+        showMessage('¿Nos decís tu nombre? Tiene que tener al menos 3 letras. 😊', 'error');
         return;
     }
 
     if (!/^[A-Za-z\s]{3,50}$/.test(apellido)) {
-        showMessage('El apellido debe tener entre 3 y 50 caracteres y solo puede contener letras y espacios.', 'error');
+        showMessage('Falta tu apellido. ¡Sin números ni símbolos, porfa! 🧐', 'error');
         return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showMessage('Por favor, introduce un correo electrónico válido.', 'error');
+        showMessage('Ese correo no parece válido. ¿Lo revisás otra vez? 📧', 'error');
         return;
     }
 
-    if (asunto.length < 5 || asunto.length > 100) {
-        showMessage('El asunto debe tener entre 5 y 100 caracteres.', 'error');
+    if (asunto.length < 5) {
+        showMessage('Danos una pista con el asunto. ¡Queremos saber de qué se trata! 🔍', 'error');
         return;
     }
 
-    if (mensaje.length < 10 || mensaje.length > 500) {
-        showMessage('El mensaje debe tener entre 10 y 500 caracteres.', 'error');
+    if (mensaje.length < 10) {
+        showMessage('¡Contanos más! Queremos conocer todos los detalles. 🗣️', 'error');
         return;
     }
 
@@ -177,10 +177,11 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             showSuccessModal();
             this.reset();
         }, (error) => {
-            showMessage('Error al enviar el formulario. Por favor, inténtalo de nuevo.', 'error');
+            showMessage('Uy, algo salió mal al enviar el mensaje. Probá de nuevo en un rato. ⏳', 'error');
             console.error('Error:', error);
         });
 });
+
 
 // Función para mostrar mensajes
 function showMessage(message, type) {
