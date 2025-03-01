@@ -34,108 +34,104 @@
         </div>
     </header>
 
-<!-- Home Section -->
-<section id="home" class="home">
-    <div class="container">
-        <div class="home-text">
-            <h2>Bienvenido a <span class="logo-text">JOESTONE<span class="orange-text">INK</span></span></h2>
-            <p>Estudio de Tatuaje</p>
-            <a href="#contact" class="btn">Reserva tu turno</a>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Section -->
-<!-- Gallery Section -->
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2>Galería</h2>
-        <div class="container-carousel">
-            <div class="carruseles" id="slider">
-                <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto1.jpg" alt="Tatuaje 1" onclick="openModal('./assets/Galeria-img/Foto1.jpg')">
-                </section>
-                <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto2.jpg" alt="Tatuaje 2" onclick="openModal('./assets/Galeria-img/Foto2.jpg')">
-                </section>
-                <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto3.jpg" alt="Tatuaje 3" onclick="openModal('./assets/Galeria-img/Foto3.jpg')">
-                </section>
-                <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto4.jpg" alt="Tatuaje 4" onclick="openModal('./assets/Galeria-img/Foto4.jpg')">
-                </section>
-                <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto5.jpg" alt="Tatuaje 5" onclick="openModal('./assets/Galeria-img/Foto5.jpg')">
-                </section>
-                <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto6.png" alt="Tatuaje 6" onclick="openModal('./assets/Galeria-img/Foto6.png')">
-                </section>
-                <!-- Agrega más imágenes según sea necesario -->
-            </div>
-            <div class="btn-left"><i class='bx bx-chevron-left'></i></div>
-            <div class="btn-right"><i class='bx bx-chevron-right'></i></div>
-        </div>
-    </div>
-</section>
-
-  <!-- Designs Section -->
-<section id="designs" class="designs">
-    <div class="container">
-        <h2>Diseños</h2>
-        <div class="designs-grid">
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/ef/ec/82/efec82e0d24c2b41d5fd3103ff83dd7e.jpg')">
-                <img src="https://i.pinimg.com/736x/ef/ec/82/efec82e0d24c2b41d5fd3103ff83dd7e.jpg" alt="Diseño 1">
-            </div>
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/86/30/6e/86306e92911c701247a33829bb19a4e4.jpg')">
-                <img src="https://i.pinimg.com/736x/86/30/6e/86306e92911c701247a33829bb19a4e4.jpg" alt="Diseño 2">
-            </div>
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
-                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
-            </div>
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
-                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
-            </div>
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
-                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
-            </div>
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
-                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
-            </div>
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
-                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
-            </div>
-            <div class="card" onclick="openModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
-                <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="container">
+            <div class="home-text">
+                <h2>Bienvenido a <span class="logo-text">JOESTONE<span class="orange-text">INK</span></span></h2>
+                <p>Estudio de Tatuaje</p>
+                <a href="#contact" class="btn">Reserva tu turno</a>
             </div>
         </div>
-        
-        
-    </div>
-</section>
+    </section>
 
-
-<!-- Modal para la imagen en pantalla completa -->
-<div id="fullscreen-modal">
-    <button class="close" onclick="closeModal()">×</button>
-    <img id="fullscreen-image" src="" alt="Diseño completo">
-</div>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="contact-title">Contacto</h2>
-        <form id="contact-form" class="contact-form">
-            <div class="form-group">
-                <input type="text" name="nombre" placeholder="Nombre" required>
-                <input type="text" name="apellido" placeholder="Apellido" required>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="container-carousel">
+                <div class="carruseles" id="slider">
+                    <section class="slider-section">
+                        <img src="./assets/Galeria-img/Foto1.jpg" alt="Tatuaje 1" onclick="openImageModal('./assets/Galeria-img/Foto1.jpg')">
+                    </section>
+                    <section class="slider-section">
+                        <img src="./assets/Galeria-img/Foto2.jpg" alt="Tatuaje 2" onclick="openImageModal('./assets/Galeria-img/Foto2.jpg')">
+                    </section>
+                    <section class="slider-section">
+                        <img src="./assets/Galeria-img/Foto3.jpg" alt="Tatuaje 3" onclick="openImageModal('./assets/Galeria-img/Foto3.jpg')">
+                    </section>
+                    <section class="slider-section">
+                        <img src="./assets/Galeria-img/Foto4.jpg" alt="Tatuaje 4" onclick="openImageModal('./assets/Galeria-img/Foto4.jpg')">
+                    </section>
+                    <section class="slider-section">
+                        <img src="./assets/Galeria-img/Foto5.jpg" alt="Tatuaje 5" onclick="openImageModal('./assets/Galeria-img/Foto5.jpg')">
+                    </section>
+                    <section class="slider-section">
+                        <img src="./assets/Galeria-img/Foto6.png" alt="Tatuaje 6" onclick="openImageModal('./assets/Galeria-img/Foto6.png')">
+                    </section>
+                </div>
+                <div class="btn-left"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right"><i class='bx bx-chevron-right'></i></div>
             </div>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="asunto" placeholder="Asunto" required>
-            <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        </div>
+    </section>
+
+    <!-- Designs Section -->
+    <section id="designs" class="designs">
+        <div class="container">
+            <h2>Diseños</h2>
+            <div class="designs-grid">
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/ef/ec/82/efec82e0d24c2b41d5fd3103ff83dd7e.jpg')">
+                    <img src="https://i.pinimg.com/736x/ef/ec/82/efec82e0d24c2b41d5fd3103ff83dd7e.jpg" alt="Diseño 1">
+                </div>
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/86/30/6e/86306e92911c701247a33829bb19a4e4.jpg')">
+                    <img src="https://i.pinimg.com/736x/86/30/6e/86306e92911c701247a33829bb19a4e4.jpg" alt="Diseño 2">
+                </div>
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                    <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+                </div>
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                    <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+                </div>
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                    <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+                </div>
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                    <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+                </div>
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                    <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+                </div>
+                <div class="card" onclick="openImageModal('https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg')">
+                    <img src="https://i.pinimg.com/736x/1a/49/80/1a4980b09bb9fab8db9a6458a1b51fc8.jpg" alt="Diseño 3">
+                </div>
+                <!-- Agrega más diseños según sea necesario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para la imagen en pantalla completa -->
+    <div id="fullscreen-modal">
+        <button class="close" onclick="closeImageModal()">×</button>
+        <img id="fullscreen-image" src="" alt="Diseño completo">
     </div>
-</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="contact-title">Contacto</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellido" placeholder="Apellido" required>
+                </div>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="asunto" placeholder="Asunto" required>
+                <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -145,23 +141,26 @@
                 <a href="https://instagram.com/joestoneink" target="_blank" aria-label="Instagram">
                     <img src="./assets/Iconos/instagram.png" alt="Instagram">
                 </a>
-                <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp">
+                <a href="https://wa.me/5493464591521" target="_blank" aria-label="WhatsApp">
                     <img src="./assets/Iconos/whatsapp.png" alt="WhatsApp">
                 </a>
             </div>
         </div>
     </footer>
-<!-- Contenedor para mensajes -->
-<div id="message-container"></div>
-<!-- Modal para el mensaje de éxito -->
-<div id="success-modal" class="modal">
-    <div class="modal-content">
-        <img src="./assets/Logo.png" alt="Logo JOESTONEINK" class="modal-logo">
-        <h2>¡Correo enviado correctamente!</h2>
-        <p>Nos pondremos en contacto contigo pronto.</p>
-        <button onclick="closeModal()">OK</button>
+
+    <!-- Contenedor para mensajes -->
+    <div id="message-container"></div>
+
+    <!-- Modal para el mensaje de éxito -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <img src="./assets/Logo.png" alt="Logo JOESTONEINK" class="modal-logo">
+            <h2>¡Correo enviado correctamente!</h2>
+            <p>Nos pondremos en contacto contigo pronto.</p>
+            <button onclick="closeSuccessModal()">OK</button>
+        </div>
     </div>
-</div>
+
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
