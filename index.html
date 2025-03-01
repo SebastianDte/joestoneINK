@@ -53,22 +53,22 @@
         <div class="container-carousel">
             <div class="carruseles" id="slider">
                 <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto1.jpg" alt="Tatuaje 1">
+                    <img src="./assets/Galeria-img/Foto1.jpg" alt="Tatuaje 1" onclick="openModal('./assets/Galeria-img/Foto1.jpg')">
                 </section>
                 <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto2.jpg" alt="Tatuaje 2">
+                    <img src="./assets/Galeria-img/Foto2.jpg" alt="Tatuaje 2" onclick="openModal('./assets/Galeria-img/Foto2.jpg')">
                 </section>
                 <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto3.jpg" alt="Tatuaje 3">
+                    <img src="./assets/Galeria-img/Foto3.jpg" alt="Tatuaje 3" onclick="openModal('./assets/Galeria-img/Foto3.jpg')">
                 </section>
                 <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto4.jpg" alt="Tatuaje 3">
+                    <img src="./assets/Galeria-img/Foto4.jpg" alt="Tatuaje 4" onclick="openModal('./assets/Galeria-img/Foto4.jpg')">
                 </section>
                 <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto5.jpg" alt="Tatuaje 3">
+                    <img src="./assets/Galeria-img/Foto5.jpg" alt="Tatuaje 5" onclick="openModal('./assets/Galeria-img/Foto5.jpg')">
                 </section>
                 <section class="slider-section">
-                    <img src="./assets/Galeria-img/Foto6.png" alt="Tatuaje 3">
+                    <img src="./assets/Galeria-img/Foto6.png" alt="Tatuaje 6" onclick="openModal('./assets/Galeria-img/Foto6.png')">
                 </section>
                 <!-- Agrega más imágenes según sea necesario -->
             </div>
@@ -124,14 +124,14 @@
 <section id="contact" class="contact">
     <div class="container">
         <h2 class="contact-title">Contacto</h2>
-        <form class="contact-form">
+        <form id="contact-form" class="contact-form">
             <div class="form-group">
-                <input type="text" placeholder="Nombre" required>
-                <input type="text" placeholder="Apellido" required>
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
             </div>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Asunto" required>
-            <textarea placeholder="Mensaje" rows="4" required></textarea>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="asunto" placeholder="Asunto" required>
+            <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </div>
@@ -151,7 +151,21 @@
             </div>
         </div>
     </footer>
-
+<!-- Contenedor para mensajes -->
+<div id="message-container"></div>
+<!-- Modal para el mensaje de éxito -->
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <img src="./assets/Logo.png" alt="Logo JOESTONEINK" class="modal-logo">
+        <h2>¡Correo enviado correctamente!</h2>
+        <p>Nos pondremos en contacto contigo pronto.</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+</div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('0_m5isbCyF7kjt6NT'); // Reemplaza con tu User ID
+    </script>
 </body>
 </html>
