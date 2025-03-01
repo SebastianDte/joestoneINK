@@ -50,8 +50,9 @@ header .container {
 
 /* Logotipo */
 header .logo img {
-    height: 60px; /* Ajusta el tamaño según tu logotipo */
+    height: 70px; /* Ajusta el tamaño según tu logotipo */
     transition: transform 0.3s ease;
+   
 }
 
 header .logo img:hover {
@@ -879,8 +880,8 @@ footer p {
 }
 
 .modal-logo {
-    width: 80px; /* Tamaño del logo */
-    margin-bottom: 15px;
+    width: 250px; /* Tamaño del logo */
+    margin-bottom: 1px;
 }
 
 .modal h2 {
@@ -925,12 +926,12 @@ footer p {
 
     /* Modal */
     .modal-content {
-        width: 90%; /* Ocupa el 90% del ancho en móviles */
+        width: 80%; /* Ocupa el 90% del ancho en móviles */
         padding: 15px;
     }
 
     .modal-logo {
-        width: 100px; /* Logo más pequeño en móviles */
+        width: 150px; /* Logo más pequeño en móviles */
     }
 
     .modal h2 {
