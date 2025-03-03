@@ -50,7 +50,7 @@ header .container {
 
 /* Logotipo */
 header .logo img {
-    height: 70px; /* Ajusta el tamaño según tu logotipo */
+    height: 60px; /* Ajusta el tamaño según tu logotipo */
     transition: transform 0.3s ease;
    
 }
